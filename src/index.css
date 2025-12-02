@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Slightly lighter / softer base while keeping dark theme */
+    @apply bg-neutral-800 text-white antialiased;
+    /* Very subtle warm overlay to soften pure dark contrast */
+    background-image: radial-gradient(circle at 10% 10%, rgba(255,165,0,0.02), transparent 8%), radial-gradient(circle at 90% 90%, rgba(255,69,0,0.02), transparent 8%);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    /* soften glow for a more professional look */
+    text-shadow: 0 0 18px rgba(255, 165, 0, 0.28);
+  }
+}
